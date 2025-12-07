@@ -18,14 +18,14 @@ export default function Tasks({ tasks, setTasks} :
             if (item) loadedTasks.push(item);
         }
     
-        setTasks(loadedTasks)
+        setTasks(loadedTasks.filter( t => t != ''))
     },[])
 
     return (
         <div className="w-full p-2 mt-2 flex flex-col gap-2 justify-center items-center">
             {
             tasks.map((task,index) => 
-                <Task key={index} task={task ?? ""}/>
+                <Task key={index} task={task ?? ""} setTasks={setTasks}/>
             )
             }
         </div>
