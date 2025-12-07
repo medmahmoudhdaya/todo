@@ -1,5 +1,5 @@
 import { useRef, type Dispatch, type SetStateAction } from "react"
-
+import { Plus } from "lucide-react";
 export default function AddTask({ tasks, setTasks} :
      { 
         tasks : string[]; 
@@ -35,7 +35,9 @@ export default function AddTask({ tasks, setTasks} :
             className="p-2 border outline-none rounded text-blue-500 font-bold text-lg flex-1" />
             <button 
             onClick={() => createTask(inputRef.current!.value )}
-            className="px-4 py-2 bg-blue-500 text-white rounded">add</button>
+            className="px-4 py-2 bg-blue-500 text-white rounded">
+                <Plus />
+            </button>
         </div>
     )
 }
