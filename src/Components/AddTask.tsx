@@ -9,6 +9,11 @@ export default function AddTask({ tasks, setTasks} :
     const inputRef = useRef<HTMLInputElement>(null)
 
     function createTask(name:string){
+
+        if (name === ""){
+            return
+        }
+        
         const tasksLength = Number(localStorage.getItem("tasksLength")) 
 
         if (tasksLength === null){
