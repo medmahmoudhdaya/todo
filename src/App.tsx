@@ -1,14 +1,14 @@
-import { useState } from "react"
+import AddTask from "./Components/AddTask"
+import Container from "./Components/Container"
+import Tasks from "./Components/Tasks"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-     <button className="bg-red-500" onClick={() => setCount(count+1)}> + </button>
-     {count}
-     <button onClick={() => setCount(count-1)}> - </button>
-    </>
+    <Container>
+      <AddTask />
+      <Tasks />
+    </Container>
   )
 }
 
