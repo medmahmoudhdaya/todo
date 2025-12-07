@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-     <button onClick={() => setCount(count+1)}> + </button>
+     <button className="bg-red-500" onClick={() => setCount(count+1)}> + </button>
      {count}
      <button onClick={() => setCount(count-1)}> - </button>
     </>
